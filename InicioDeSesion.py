@@ -19,7 +19,6 @@ def gettingPassword():
     Password = Ent2.get()
 
 def CloseWindow():
-    global window
     window.quit()
 
 window = Tk()
