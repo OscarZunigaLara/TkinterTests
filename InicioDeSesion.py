@@ -6,6 +6,9 @@ from tkinter import messagebox
 
 ValidUsser= "Tandoori7"
 ValidPasswd="AAA"
+VP = False
+VU = False
+
 
 def printingTest():
     print("Testing 1 2 3")
@@ -14,12 +17,30 @@ def printingTest():
 def gettingUsser():
     Usser= Ent1.get()
     print(Usser)
+    if (Usser == ValidUsser):
+        print("Valid Usser")
+        VU = True
+    gettingPassword()
+    VALIDATE()
+
 
 def gettingPassword():
     Password = Ent2.get()
+    print(Password)
+    if (Password == ValidPasswd):
+        print("Password Correct")
+        VP= True
 
 def CloseWindow():
     window.quit()
+
+def VALIDATE():
+    if (VP and VU):
+        print("FELICIDADES")
+    else:
+        print("WRONG")
+
+
 
 window = Tk()
 
@@ -35,8 +56,8 @@ Labl2 = Label(window, text="Introduce Contraseña")
 Ent1 = Entry(window)
 Ent2 = Entry(window)
 
-BTN1 = Button(window, text =("INICIAR SESIÓN")  , command=gettingUsser())
-BTN2 = Button(window, text=("Crear Cuenta Nueva"), command=gettingPassword)
+BTN1 = Button(window, text =("INICIAR SESIÓN"), command=gettingUsser())
+BTN2 = Button(window, text=("Crear Cuenta Nueva"), command=gettingPassword())
 BTN3 = Button(window, text="Cerrar", commad=CloseWindow())
 
 
