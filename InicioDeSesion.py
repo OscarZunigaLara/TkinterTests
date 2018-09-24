@@ -56,6 +56,12 @@ Labl2 = Label(window, text="Introduce Contraseña")
 Ent1 = Entry(window)
 Ent2 = Entry(window)
 
+Ent1.grid(column=1, row=0)
+Ent2.grid(column=1, row=1)
+
+Labl1.grid(column=0, row=0)
+Labl2.grid(column=0, row=1)
+
 BTN1 = Button(window, text =("INICIAR SESIÓN"), command=gettingUsser())
 BTN2 = Button(window, text=("Crear Cuenta Nueva"), command=gettingPassword())
 BTN3 = Button(window, text="Cerrar", commad=CloseWindow())
@@ -64,12 +70,6 @@ BTN3 = Button(window, text="Cerrar", commad=CloseWindow())
 BTN1.grid(column=1, row=3)
 BTN2.grid(column=0, row=3)
 BTN3.grid(column=2, row=0)
-
-Ent1.grid(column=1, row=0)
-Ent2.grid(column=1, row=1)
-
-Labl1.grid(column=0, row=0)
-Labl2.grid(column=0, row=1)
 
 window.mainloop()
 
