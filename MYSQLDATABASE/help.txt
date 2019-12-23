@@ -1,0 +1,9 @@
+sudo apt-get install appmenu-gtk2-module appmenu-gtk3-module
+
+https://doc.qt.io/archives/qt-4.8/qlineedit.html#echoMode-prop
+
+https://stackoverflow.com/questions/5834412/using-qlineedit-for-passwords
+
+https://medium.com/@hektorprofe/primeros-pasos-en-pyqt-5-y-qt-designer-programas-gr%C3%A1ficos-con-python-6161fba46060
+
+https://codeloop.org/connect-pyqt5-with-mysql-database/
