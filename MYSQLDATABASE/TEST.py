@@ -4,15 +4,9 @@ import sys
 import pymysql
 from PyQt5.uic.properties import QtWidgets
 
+from inicioSesion import Ui_Dialog
 
 
-from inicioSesion.py import *
 
-class MainWindow(QtWidgets.QMainWindow):
-   pass
-
-if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
-    window = MainWindow()
-    window.show()
-    app.exec_()
+if __name__ == '__main__':
+    print(TEST)

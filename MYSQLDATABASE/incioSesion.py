@@ -8,7 +8,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import pymysql
 
 
 class Ui_Dialog(object):
@@ -20,12 +19,13 @@ class Ui_Dialog(object):
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
-        self.lineEdit = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit.setGeometry(QtCore.QRect(20, 20, 251, 31))
-        self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_2.setGeometry(QtCore.QRect(20, 80, 251, 31))
-        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.user = QtWidgets.QLineEdit(Dialog)
+        self.user.setGeometry(QtCore.QRect(20, 20, 251, 31))
+        self.user.setObjectName("user")
+        self.password = QtWidgets.QLineEdit(Dialog)
+        self.password.setGeometry(QtCore.QRect(20, 80, 251, 31))
+        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.password.setObjectName("password")
 
         self.retranslateUi(Dialog)
         self.buttonBox.accepted.connect(Dialog.accept)
@@ -35,6 +35,8 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.user.setPlaceholderText(_translate("Dialog", "user"))
+        self.password.setPlaceholderText(_translate("Dialog", "password"))
 
 
 if __name__ == "__main__":
